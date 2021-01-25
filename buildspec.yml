@@ -16,6 +16,7 @@ phases:
         - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
+      - docker login -u samsid032 -p shopistan_makr
       - docker build --tag $REPOSITORY_URI:$TAG .
 
   post_build:
